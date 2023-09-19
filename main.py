@@ -20,7 +20,7 @@ def generate_password():
 
     password = "".join(password)
 
-    print(password)
+    print("\033[92m" + password + "\033[0m")
 
 
 generate_password()
