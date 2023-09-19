@@ -1,7 +1,7 @@
 import string
 import random
 
-characters = list(string.ascii_letters + string.digits + "!@#$%^&*()?/")
+characters = list(string.ascii_letters + string.digits + string.punctuation)
 
 
 def generate_password():
@@ -16,11 +16,9 @@ def generate_password():
     for i in range(len_password):
         password.append(random.choice(characters))
 
-    random.shuffle(password)
-
     password = "".join(password)
 
-    print("\033[92m" + password + "\033[0m")
+    print("Your password: \033[92m" + password + "\033[0m")
 
 
 generate_password()
